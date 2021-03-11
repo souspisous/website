@@ -1,0 +1,20 @@
+{% extends 'shop_products/base_shop.html' %}
+
+{% block title %}
+	Home page
+{% endblock %}
+
+{% block content %}
+
+{%for prod in products%}
+	<div class="card">
+	  	<h5 class="card-header">{{prod.time}}</h5>
+	  	<div class="card-body">
+			<h5 class="card-title">{{prod.name}}</h5>
+			<p class="card-text">{{prod.text|truncatewords:15}}</p>
+			<a href="{% url 'prod_detail_url' slug=prod.slug %}" class="btn btn-light">Read</a>
+	  	</div>
+	</div>
+{%endfor%}
+
+{% endblock %}

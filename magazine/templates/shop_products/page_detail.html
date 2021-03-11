@@ -1,0 +1,16 @@
+{% extends 'shop_products/base_shop.html' %}
+
+{% block title %}
+    {{product.name}}
+{% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">
+        {{product.name}}
+    </h1>
+    <p>
+        {{product.text}}
+    </p>
+
+
+{% endblock %}
